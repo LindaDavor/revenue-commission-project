@@ -16,7 +16,7 @@ export class HomeComponent {
     }),
   });
 onSubmit(){
-  console.warn(this.profileForm.value);
+  console.log(this.profileForm.value);
 }
 
 }

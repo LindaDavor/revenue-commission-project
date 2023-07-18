@@ -1,29 +1,33 @@
 <app-backgroundimage></app-backgroundimage>
-<form [formGroup]="profileForm"
-(ngSubmit)="onSubmit()">
-<div>
-  <div class="form-group col-md-4">
-    <label for="firstName">Fist Name</label>
-    <input type="text" class="form-control" id="firstName">
+<div class="container">
+  <div class="col-md-4">
+    <form [formGroup]="profileForm"
+    (ngSubmit)="onSubmit()">
+    <div class="user-data">
+      <div class="form-group">
+        <label for="firstName">Fist Name</label>
+        <input type="text" class="form-control" id="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="inputLastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" required email>
+      </div>
+      <div class="form-group">
+        <label for="idNumber">Employee ID</label>
+        <input type="text" class="form-control" id="idNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="ticket">Number of Sold Ticket</label>
+        <input type="text" class="form-control" id="ticket" required>
+      </div>
+      <p>Complete the form to enable button</p>
+      <button type="submit" [disabled]="!profileForm
+      .value" class="btn btn-outline-success">submit</button>
+    </div>
+    </form>
   </div>
-  <div class="form-group col-md-4">
-    <label for="lastName">Last Name</label>
-    <input type="text" class="form-control" id="inputLastName" >
-  </div>
-  <div class="form-group col-md-4">
-    <label for="email1">Email address</label>
-    <input type="email" class="form-control" id="email1">
-  </div>
-  <div class="form-group col-md-4">
-    <label for="idNumber">Employee ID</label>
-    <input type="text" class="form-control" id="idNumber">
-  </div>
-  <div class="form-group col-md-4">
-    <label for="ticket">Number of Sold Ticket</label>
-    <input type="text" class="form-control" id="ticket">
-  </div>
-  <p>Complete the form to enable button</p>
-  <button type="submit" [disabled]="!profileForm
-  .value" class="btn btn-outline-success">submit</button>
 </div>
-</form>
